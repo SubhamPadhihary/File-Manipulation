@@ -16,11 +16,12 @@ def movies():
 
     # create a movie_launch dictionary containing movie_name as key and
     # index of that movie in movies_name_only as value.
-    movie_to_launch = collections.defaultdict(int)  # print(movie_to_launch) to see what it looks like
+    movie_to_launch = collections.defaultdict(int)# print(movie_to_launch) to see what it looks like
+    movie_names_to_access_the_dict = []
     for index, a_movie in enumerate(movie_names):
         if movie_name in a_movie:
-            movie_to_launch[movie_name] += index  # use movie_name as key and not a_movie because you a_movie is not
-                                                  # not available outside the for loop and you need to access the value
+            movie_to_launch[a_movie] += index  # use movie_name as key and not a_movie because you a_movie is not
+            movie_names_to_access_the_dict.append()                            # not available outside the for loop and you need to access the value
                                                   # of the dict using a valid key, else the
 
     print(movie_to_launch)
