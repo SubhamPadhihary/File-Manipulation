@@ -8,7 +8,7 @@ def movies():
     vlc_path = "D:\\Program files\\VLC\\vlc.exe"
 
     # input the name of the movie
-    movie_name = input('Enter the name of the movie').split()
+    movie_name = input('Enter the name of the movie: ').split()
     movie_name = ' '.join(movie_name)
 
     # Get the path of the movies and names of movies
