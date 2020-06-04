@@ -20,19 +20,11 @@ def movies():
     movie_names_to_access_the_dict = []
     for index, a_movie in enumerate(movie_names):
         if movie_name in a_movie:
-            movie_to_launch[a_movie] += index  # use movie_name as key and not a_movie because you a_movie is not
-            movie_names_to_access_the_dict.append()                            # not available outside the for loop and you need to access the value
-                                                  # of the dict using a valid key, else the
+            movie_to_launch[a_movie] += index
 
-    print(movie_to_launch)
-    print(movie_path_list[movie_to_launch[movie_name]])
-    print(len(movie_to_launch))
-    print(len(movie_to_launch.keys()))
-    if len(movie_to_launch.keys()):
-        print('hey')
     # If there is only one movie run it using VLC
     if len(movie_to_launch) == 1:
-        subprocess.Popen([vlc_path, movie_path_list[movie_to_launch[movie_name]]])
+        subprocess.Popen([vlc_path, movie_path_list[movie_to_launch[list(movie_to_launch.keys())[0]]]])
 
     # If there are more than one movies found, list the movies.
     elif len(movie_to_launch) > 1:
@@ -40,9 +32,8 @@ def movies():
             print(index + 1, '. ', key, sep='')
         # And Prompt for a choice
         choice = int(input('Enter choice: '))
+        # Select the movie from dict.keys() and run it.
         movie_name = list(movie_to_launch.keys())[choice - 1]
-        print(type(movie_name))
-        print(movie_to_launch[movie_name])
         subprocess.Popen([vlc_path, movie_path_list[movie_to_launch[movie_name]]])
     else:
         print('Not Found')
