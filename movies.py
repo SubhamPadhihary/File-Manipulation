@@ -8,7 +8,7 @@ def movies():
     vlc_path = "D:\\Program files\\VLC\\vlc.exe"
 
     # input the name of the movie
-    movie_name = input().split()
+    movie_name = input('Enter the name of the movie').split()
     movie_name = ' '.join(movie_name)
 
     # Get the path of the movies and names of movies
@@ -16,7 +16,7 @@ def movies():
 
     # create a movie_launch dictionary containing movie_name as key and
     # index of that movie in movies_name_only as value.
-    movie_to_launch = collections.defaultdict(int)# print(movie_to_launch) to see what it looks like
+    movie_to_launch = collections.defaultdict(int)  # print(movie_to_launch) to see what it looks like
     movie_names_to_access_the_dict = []
     for index, a_movie in enumerate(movie_names):
         if movie_name in a_movie:
