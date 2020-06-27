@@ -4,8 +4,8 @@ import collections
 
 
 def movies():
-    path = "D:\\Movies"
-    vlc_path = "D:\\Program files\\VLC\\vlc.exe"
+    path = "D:\\Movies"  # Edit this. This is the path of the folder where the movies are stored.
+    vlc_path = "D:\\Program files\\VLC\\vlc.exe"  # Edit this. This is the path where VLC is stored.
 
     # input the name of the movie
     movie_name = input('Enter the name of the movie: ').split()
