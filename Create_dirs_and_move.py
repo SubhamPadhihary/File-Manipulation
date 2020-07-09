@@ -2,7 +2,7 @@ import shutil
 import os
 
 
-movies = "D:\\Test Movies"
+movies = "D:\\Movies"
 
 # get the file names without their extensions for the dir names.
 def get_file_names():
@@ -15,6 +15,7 @@ def get_file_names():
 file_names = get_file_names()
 # Create dirs with the corresponding file names
 def create_dirs():
+    dir_path = ''
     choice = ask_for_confirmation_before_creating_dirs()
     if choice == 'y':
         for files in file_names:
@@ -28,6 +29,7 @@ def create_dirs():
         exit(1)
 
 def ask_for_confirmation_before_creating_dirs():
+    dir_path = ''
     for files in file_names:
         dir_path = os.path.join(movies, os.path.splitext(files)[0])
         if not os.path.exists(dir_path):
@@ -42,6 +44,7 @@ def ask_for_confirmation_before_creating_dirs():
 # Move the files to the appropriate dirs.
 def ask_for_confirmation_before_moving():
     dir_name = ''
+    dir_path = ''
     for everything in os.listdir(movies):
         # Get the dir_path to move the file to corresponding dir.
         if os.path.isdir(os.path.join(movies, everything)):
@@ -59,6 +62,8 @@ def ask_for_confirmation_before_moving():
 
 def move_files():
     # ask for confirmation and move files code is very similar.
+    dir_name = ''
+    dir_path = ''
     choice = ask_for_confirmation_before_moving()
     if choice == 'y':
         for everything in os.listdir(movies):
