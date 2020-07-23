@@ -1,5 +1,5 @@
 # File-Manipulation
-This repo contains scripts that help me automate file management. Should have called the repo File-Management instead of File-Manipulation...
+This repo contains scripts that help me automate file management.
 ## 1. movies.py
 movies.py is a simple script that can run movies in a folder(with specified path that you can edit inside the code) with VLC or any other local media player you have, by entering the title of the movie(Which may not be complete. Say you want to run 'Exodus: Gods and Kings', you don't need to write the whole thing, just 'Exodus' would be fine.
 
