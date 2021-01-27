@@ -11,3 +11,6 @@ For Example: Move an episode of a TV show to a folder D:\TV shows, and a movie t
 
 ## 3. create_dirs_and_move.py
 This script creates folders from the movie names and then moves the movies to their corresponding folders.
+
+## 4. create_TV_series_folders_and_move.py
+This script is similar to the 3rd one, as in it creates folders for loose TV episodes and moves episodes to those folders.
